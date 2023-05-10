@@ -5,11 +5,17 @@ Looking for personalized academic support from the comfort of your own home? I o
 ### Design
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="description.png">
-  <img alt="This is picture was made with NinjaMock. If you can't see it, I had a really hard time figuring out how to include it in here since I needed a URL" src="desciption.png">
+  <img alt="This picture was made with NinjaMock. If you can't see it, I had a really hard time figuring out how to include it in here since I needed a URL" src="desciption.png">
 </picture>
 
 ### Key Features
+- Secure login over HTTPS
+- Ability to set tutoring appointments
+- Able to view a calendar
+- Able to set tasks with due dates
+- Leave ratings from sessions
+- Able to view notes from previous sessions
 ### Technologies
-- a
+- **HTML** - hello there
 - b
 - c
