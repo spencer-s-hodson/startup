@@ -5,9 +5,8 @@ Looking for personalized academic support from the comfort of your own home? Our
 ### Design
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="description.png">
-  <img alt="Shows an illustrated sun in light mode and a moon with stars in dark mode." src="desciption.png">
+  <img alt="This is picture was made with NinjaMock. If you can't see it, I had a really hard time figuring out how to include it in here since I needed a URL" src="desciption.png">
 </picture>
-
 
 ### Key Features
 ### Technologies
