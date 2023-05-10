@@ -25,5 +25,5 @@ Looking for personalized academic support from the comfort of your own home? I o
     - retrieving reviews
 - **DB** - Store users, reviews, and previoius session information in database
 - **Login** - Register and login users. Credentials securely stored in database. Can't meet with me without one.
-- **WebSocket** - All website visitors will be able to see the reviews that students have left
+- **WebSocket** - All website visitors will be able to see the reviews that students leave
 - **React** - Application ported to use the React web framework.
