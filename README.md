@@ -16,6 +16,6 @@ Looking for personalized academic support from the comfort of your own home? I o
 - Leave ratings from sessions
 - Able to view notes from previous sessions
 ### Technologies
-- **HTML** - hello there
-- b
-- c
+- **HTML** - Uses HTML structure. I'll need 3 pages. A Home screen, a place to leave a review, and a place to view the calendat
+- **CSS** - Application styling, spacing, and use of contrasting colors
+- **JavaScript** - Provides login and interation with the calendar
