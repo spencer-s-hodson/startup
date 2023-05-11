@@ -29,11 +29,10 @@ Looking for personalized academic support from the comfort of your own home? I o
 - **React** - Application ported to use the React web framework.
 ## HTML Deliverable
 For this deliverable I added the application structure.
-
-**HTML pages** - Five HTML pages that represent the ability to login, leave reviews, keep track of assignments, view session history, and send messages to me.
-**Links** - The login page automatically links to the home page. After logging in, you are able to link any of the other HTML pages, including the login page (sign out)
-**Text** - Each review leaves a 0-5 star rating, as well as text.
-**Login** - Input box and submit button for login.
-**Database** - The voting choices represent data pulled from the database. Previous sessions are also stored in a database, and are viewable from the History section
-**WebSocket** - Displays all reviews from to the Homepage. Also a chat feature in the messages section
-**hi**
+- **HTML pages** - Five HTML pages that represent the ability to login, leave reviews, keep track of assignments, view session history, and send messages to me.
+- **Links** - The login page automatically links to the home page. After logging in, you are able to link any of the other HTML pages, including the login page (sign out)
+- **Text** - Each review leaves a 0-5 star rating, as well as text.
+- **Login** - Input box and submit button for login.
+- **Database** - The voting choices represent data pulled from the database. Previous sessions are also stored in a database, and are viewable from the History section
+- **WebSocket** - Displays all reviews from to the Homepage. Also a chat feature in the messages section
+- **hi**
