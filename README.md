@@ -16,7 +16,7 @@ Looking for personalized academic support from the comfort of your own home? I o
 - Leave ratings from sessions
 - Able to view notes from previous sessions
 ### Technologies
-- **HTML** - Uses HTML structure. I'll need 3 pages. A Home screen, a place to leave a review, and a place to view the calendat
+- **HTML** - Uses HTML structure. I'll need 3 pages. A Home screen, a place to leave a review, and a place to view the calendar
 - **CSS** - Application styling, spacing, and use of contrasting colors
 - **JavaScript** - Provides login, interation with the calendar, and ability to leave ratings
 - **Service** - Backend service with endpoints for:
@@ -35,4 +35,4 @@ For this deliverable I added the application structure.
 - **Login** - Input box and submit button for login.
 - **Database** - The voting choices represent data pulled from the database. Previous sessions are also stored in a database, and are viewable from the History section
 - **WebSocket** - Displays all reviews from to the Homepage. Also a chat feature in the messages section
-- **hi**
+- 
