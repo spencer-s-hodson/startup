@@ -34,5 +34,4 @@ For this deliverable I added the application structure.
 - **Text** - Each review leaves a 0-5 star rating, as well as text.
 - **Login** - Input box and submit button for login.
 - **Database** - The voting choices represent data pulled from the database. Previous sessions are also stored in a database, and are viewable from the History section
-- **WebSocket** - Displays all reviews from to the Homepage. Also a chat feature in the messages section
-- 
+- **WebSocket** - Displays all reviews from to the Homepage. Also a chat feature in the messages section. Finally, able to add assignments/tasks to take care of in the assignments section
