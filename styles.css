@@ -4,6 +4,8 @@
   }
   
   body {
+    display: flex;
+    flex-direction: column;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
   }
@@ -40,6 +42,10 @@
     color: black;
   }
   
+  header {
+    flex: 0 150px;
+  }
+
   main {
     background-color: #ffffff;
     padding: 10px;
@@ -47,6 +53,9 @@
   }
   
   footer {
+    flex: 0;
+    display: flex;
+    flex-direction: row;
     background-color: #003366;
     color: #f2f2f2;
     padding: 10px;
