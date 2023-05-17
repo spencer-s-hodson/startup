@@ -36,3 +36,13 @@ For this deliverable I added the application structure.
 - **Login** - Input box and submit button for login.
 - **Database** - The voting choices represent data pulled from the database. Previous sessions are also stored in a database, and are viewable from the History section
 - **WebSocket** - Displays all reviews from to the Homepage. Also a chat feature in the messages section. Finally, able to add assignments/tasks to take care of in the assignments section
+
+## CSS Deliverable
+For this deliverable I properly styled the application into its final appearance.
+
+- **Header, footer, and main content body** - I added some images to the home page, and also made a logo for my website. The logo also function as an icon on the website tab. All code is separated by header, footer, and main body
+- **Navigation elements** - I dropped the underlines, added color, and I also added some hovering feautures for the navigation bar and GitHub footer
+- **Responsive to window resizing** - My app looks great on all window sizes and devices!
+- **Application elements** - Used good contrast of color and whitespace. All pages are consistent in design
+- **Application text content** - All fonts are consistent in size and font
+- **Application images** - added images and also a logo
