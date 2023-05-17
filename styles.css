@@ -1,53 +1,47 @@
 * {
-font-family: sans-serif;
-}
-
-html {
-display: flex;
-flex-direction: column;
-height: 100%;
-}
-
-header {
-flex: 0 50px;
-font-size: 20px;
-background: hsl(223, 44%, 56%);
-color: white;
-
-display: flex;
-flex-direction: row;
-justify-content: start;
-align-items: center;
-}
-
-main {
-flex: 1;
-font-size: 30px;
-background-color: hsl(223, 19%, 74%);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: center;
-}
-
-footer {
-flex: 0 50px;
-background:  hsl(223, 44%, 56%);
-color: white;
-
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
-}
-
-
-nav {
-background: hsl(223, 44%, 56%);
-}
-
-li {
-    display: inline;
-    color: white;
-    padding: 0.5em;
-    }
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the top navigation bar */
+  .nav {
+    overflow: hidden;
+    background-color: #003366;
+  }
+  
+  /* Style the topnav links */
+  .nav a {
+    text-size-adjust: 2rem;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    margin-top: 100px;
+  }
+  
+  /* Change color on hover */
+  .nav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  /* Style the content */
+  main {
+    background-color: #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+  }
+  
