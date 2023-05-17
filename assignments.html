@@ -19,59 +19,41 @@
         </header>
         <main>
             <h2>Assignments</h2>
-            <table>
-                <tr>
-                    <td>
-                        <p><b>CS 260</b></p>
-                    </td>
-                    <td>
-                        <p><b>CS 235</b></p>
-                    </td>
-                    <td>
-                        <p><b>Music 203</b></p>
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Add New Subject"><button type="submit">+</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><input type="checkbox">HTML Startup Specification</p>
-                    </td>
-                    <td>
-                        <p><input type="checkbox">Lab01</p>
-                    </td>
-                    <td>
-                        <p><input type="checkbox">LA01</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <p><input type="checkbox">CSS Simon</p>
-                    </td>
-                    <td>
-                        <p><input type="checkbox">lab02</p>
-                    </td>
-                    <td>
-                        <p><input type="checkbox">Midterm 1</p>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <input type="text" placeholder="Add New Assignment"><button type="submit">+</button>
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Add New Assignment"><button type="submit">+</button>
-                    </td>
-                    <td>
-                        <input type="text" placeholder="Add New Assignment"><button type="submit">+</button>
-                    </td>
-                </tr>
-            </table>
-            <hr>
+            <table class="table">
+                <thead class="">
+                  <tr>
+                    <th class="ath" scope="col">CS 260</th>
+                    <th class="ath" scope="col">CS 235</th>
+                    <th class="ath" scope="col">MUSIC 203</th>
+                    <th><input type="text" placeholder="Add Class"><button type="button" class="btn btn-primary">+</button></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td scope="row"><input type="checkbox"> CSS Startup</td>
+                    <td><input type="checkbox">Lab02 SNAP</td>
+                    <td><input type="checkbox">Reading before class</td>
+                  </tr>
+                  <tr>
+                    <td scope="row"><input type="checkbox">JavaScript HW</td>
+                    <td><input type="checkbox">Lab01 Peer Reviews</td>
+                    <td><input type="checkbox">Attend concert</td>
+                  </tr>
+                  <tr>
+                    <td scope="row"><input type="checkbox">Midterm 1</td>
+                    <td><input type="checkbox">Lab03</td>
+                    <td><input type="checkbox">Research Question</td>
+                  </tr>
+                  <tr>
+                    <td><input type="text" placeholder="Add Assignment"><button type="button" class="btn btn-primary">+</button></td>
+                    <td><input type="text" placeholder="Add Assignment"><button type="button" class="btn btn-primary">+</button></td>
+                    <td><input type="text" placeholder="Add Assignment"><button type="button" class="btn btn-primary">+</button></td>
+
+                  </tr>
+                </tbody>
+              </table>
         </main>
         <footer>
-            <p>Author(s)</p>
             <a href="https://github.com/spencer-s-hodson/startup">GitHub</a>
         </footer>
     </body>
