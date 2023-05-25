@@ -5,6 +5,7 @@
         <link rel="icon" href="SPENCERTUTORSLOGO.png">
         <link rel="stylesheet" href="styles.css">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="login.js"></script>
     </head>
     <body>
         <header class="nav">
@@ -18,11 +19,11 @@
         <main class="login">
           <h2 style="margin-top: 45px; margin-bottom: 20px;"><b>Sign Into Your Account</b></h2>
           <div style="margin-bottom: 10px;">Email:</div>
-          <input type="text">
+          <input type="text" id="email">
           <div style="margin-bottom: 10px; margin-top: 10px;">Password:</div>
-          <input type="text">
-          <div style="margin: 10px;"><a href="https://byu.zoom.us/my/spencerhodson" class="btn btn-primary">Login</a></div>
-          <div style="margin-bottom: 45px;"><input type="checkbox" checked> Remember Me</div>
+          <input type="text" id="password">
+          <div style="margin: 10px;"><button class="btn btn-primary" onclick="login()">Login</button></div>
+          <div style="margin-bottom: 45px;"><input type="checkbox" checked>Remember Me</div>
         </main>
         <footer>
             <a href="https://github.com/spencer-s-hodson/startup">GitHub</a>
