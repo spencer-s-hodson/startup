@@ -49,14 +49,14 @@ For this deliverable I properly styled the application into its final appearance
 
 
 # MIDTERM 1 Review
-- You can use this CSS to load fonts from Google:
 ![](https://images-cdn.kahoot.it/e407a005-28a4-436c-9710-26aee3c1e38a?auto=webp&width=1000)
+- You can use this CSS to load fonts from Google:
   - Answer: True
 ![](https://images-cdn.kahoot.it/20cd1ae0-4ee3-4acc-9db4-6e0485f49c35?auto=webp&width=1000)
 - How will the "hello world" text be oriented? 
-  - Answer: 
+  - Answer: two lines, with the first line saying World and the second Hello
+![image](https://github.com/spencer-s-hodson/startup/assets/125321450/42c7a6dc-c317-46d9-9bb3-815d9f8726a2)
 
-- 
 - what is a dns subdomain
 - what does the DOM textContent property do
 - what does <div> stand for?
