@@ -50,7 +50,7 @@ For this deliverable I properly styled the application into its final appearance
 ## JavaScript Deliverable
 For this deliverable I made my application functional to track and display session history, as well as assignments.
 
-- **Login** - When you press the login button it takes you to the home page, and displays the entered email with whatever email you used to login.
+- **Login** - When you press the login button it takes you to the home page, and displays the entered email with whatever email you used to login. You aren't able to continue if you leave the boxes blank and click login
 - **Database** - Displays all session history on the "History". Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
-- **WebSocket** - I used the setInterval function to periodically shuffle between ratings that have been left for mr. This will be replaced with WebSocket messages later.
+- **WebSocket** - I used the setInterval function to display ratings that have been left for me every 2 seconds. This will be replaced with WebSocket messages later.
 - **Application Logic** - In the assignments tab, the user is able to remove completed assignments by clicking on the checkbox. This will remove that item completely
