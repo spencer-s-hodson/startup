@@ -1,3 +1,4 @@
+// This function stores the entered email and password into local storage, and directs the user to the home page
 function login() {
   const emailEl = document.getElementById("email");
   const passEl = document.getElementById("password");
