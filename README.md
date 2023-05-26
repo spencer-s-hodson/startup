@@ -50,7 +50,7 @@ For this deliverable I properly styled the application into its final appearance
 ## JavaScript Deliverable
 For this deliverable I made my application functional to track and display session history, as well as assignments.
 
-- **Login** - When you press enter or the login button it takes you to the home page, and displays the entered email with whatever email you used to login.
-database - Displayed the voting counts. Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
-WebSocket - I used the setInterval function to periodically increase a random vote count. This will be replaced with WebSocket messages later.
-application logic - The highlight and ranking number change based up the user's selections.
+- **Login** - When you press the login button it takes you to the home page, and displays the entered email with whatever email you used to login.
+- **Database** - Displays all session history on the "History". Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
+- **WebSocket** - I used the setInterval function to periodically shuffle between ratings that have been left for mr. This will be replaced with WebSocket messages later.
+- **Application Logic** - In the assignments tab, the user is able to add classes and assignments to keep track of their school work

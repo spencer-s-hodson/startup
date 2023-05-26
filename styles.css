@@ -76,6 +76,13 @@
     font-size: 1.5rem;
   }
 
+  th {
+    margin: 0;
+  border: 1px solid grey;
+  white-space: nowrap;
+  border-top-width: 0px;
+  }
+
   .checkmark {
     position: absolute;
     top: 0;
@@ -88,4 +95,5 @@
   .login {
     margin: 10px;
   }
+
   

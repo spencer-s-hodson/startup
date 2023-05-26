@@ -29,9 +29,9 @@ function previousSessions() {
 
   
         dateTdEl.innerText = session.date;
-        durationTdEl.innerText = session.duration;
+        durationTdEl.innerText = session.duration + " hrs";
         subjectTdEl.innerText = session.subject;
-        costTdEl.innerText = session.cost;
+        costTdEl.innerText = "$" + session.cost;
         notesTdEl.innerText = session.notes;
 
 
