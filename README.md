@@ -53,4 +53,4 @@ For this deliverable I made my application functional to track and display sessi
 - **Login** - When you press the login button it takes you to the home page, and displays the entered email with whatever email you used to login.
 - **Database** - Displays all session history on the "History". Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
 - **WebSocket** - I used the setInterval function to periodically shuffle between ratings that have been left for mr. This will be replaced with WebSocket messages later.
-- **Application Logic** - In the assignments tab, the user is able to add classes and assignments to keep track of their school work
+- **Application Logic** - In the assignments tab, the user is able to remove completed assignments by clicking on the checkbox. This will remove that item completely

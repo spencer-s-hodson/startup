@@ -4,9 +4,15 @@ function login() {
   const passEl = document.getElementById("password");
   localStorage.setItem("email", emailEl.value);
   localStorage.setItem("password", passEl.value);
-  window.location.href = "home.html";
-}
 
+  if (!emailEl.value || !passEl.value) {
+    event.preventDefault();
+    alert('Please enter both email and password.');
+  } else {
+    window.location.href = "home.html";
+  }
+  
+}
 document.addEventListener("DOMContentLoaded", function() {
   // On the home page, retrieve the stored email from local storage
   const storedEmail = localStorage.getItem('email');
