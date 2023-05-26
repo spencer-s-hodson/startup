@@ -17,7 +17,7 @@ const session4 = new Session("May 10th, 2023", 1, "English", "Good job!")
 let sessions = [session1, session2, session3, session4];
 
 function previousSessions() {
-    const tableBodyEl = document.querySelector('#sessions');
+    const tableBodyEl = document.querySelector('#table_body');
   
     if (sessions.length) {
       for (const [i, session] of sessions.entries()) {
