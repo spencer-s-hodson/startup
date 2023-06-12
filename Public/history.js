@@ -35,7 +35,6 @@ function previousSessions() {
         notesTdEl.innerText = session.notes;
 
 
-  
         const rowEl = document.createElement('tr');
         rowEl.appendChild(dateTdEl);
         rowEl.appendChild(durationTdEl);
