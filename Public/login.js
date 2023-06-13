@@ -33,6 +33,34 @@ async function login() {
   }
 }
 
+async function startSession() {
+  const currentTime = new Date();
+  const formattedTime = currentTime.toLocaleTimeString('en-US', {
+  hour: 'numeric',
+  minute: 'numeric',
+  hour12: true
+});
+
+
+  const response = await fetch("/joinSession", {
+    method: "post",
+    headers: { 'Content-type': 'application/json' },
+    body: JSON.stringify({ username : localStorage.getItem('username'), time : formattedTime })
+  });
+
+    alert("Your session started at " + formattedTime + ", and will finish in an hour. You are now being redirected to Zoom.")
+    window.location.href = "https://byu.zoom.us/my/spencerhodson";
+}
+
+
+
+
+
+
+
+
+
+
 document.addEventListener("DOMContentLoaded", function() {
   // On the home page, retrieve the stored username from local storage
   const storedUsername = localStorage.getItem('username');

@@ -34,10 +34,17 @@ function loginStatement(username, password) {
   }
 }
 
+let array = []
+app.post('/joinSession', (req, res) => {
+    array.push(req.body)
+    console.log("this is the body", req.body)
+    res.status(201).send({"message": "User joined Zoom"})
+  });
 
-
-
-
+// make sure that i populate the array before i get it
+app.get('/history/:username', (req, res) => {
+    res.send(array)
+})
 
 
 app.get('/cookie', (req, res, next) => {
@@ -66,10 +73,6 @@ app.delete(/\/store\/(.+)/, (req, res) => res.send({delete: req.params[0]}));
 app.get('/error', (req, res, next) => {
   throw new Error('Trouble in river city');
 });
-
-
-
-
 
 // THIS IS GOOD
 app.use(function (err, req, res, next) {

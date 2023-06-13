@@ -3,7 +3,6 @@ function displayQuote(data) {
       .then((response) => response.json())
       .then((data) => {
         const containerEl = document.querySelector('#quote');
-  
         const quoteEl = document.createElement('p');
         quoteEl.classList.add('quote');
         const authorEl = document.createElement('p');
