@@ -45,7 +45,7 @@ async function startSession() {
   const response = await fetch("/joinSession", {
     method: "post",
     headers: { 'Content-type': 'application/json' },
-    body: JSON.stringify({ username : localStorage.getItem('username'), time : formattedTime })
+    body: JSON.stringify({ username : localStorage.getItem('username'), time : currentTime })
   });
 
     alert("Your session started at " + formattedTime + ", and will finish in an hour. You are now being redirected to Zoom.")
