@@ -54,3 +54,12 @@ For this deliverable I made my application functional to track and display sessi
 - **Database** - Displays all session history on the "History". Currently this is stored and retrieved from local storage, but it will be replaced with the database data later.
 - **WebSocket** - I used the setInterval function to display ratings that have been left for me every 2 seconds. This will be replaced with WebSocket messages later.
 - **Application Logic** - In the assignments tab, the user is able to remove completed assignments by clicking on the checkbox. This will remove that item completely
+
+## Service Deliverable
+For this deliverable, I created an HTTP service to host my frontend and provide backend endpoints.
+
+- **Node.js/Express HTTP service** - done! (index.js, first couple of lines)
+- **Static middleware for frontend** - done! (index.js)
+- **Calls to third party endpoints** - about.js
+- **Backend service endpoints** - Placeholders for login that stores the current user and password on the server. Endpoints for storing session information as well.
+- **Frontend calls service endpoints** - I did this use the fetch function.
