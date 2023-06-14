@@ -13,14 +13,6 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-
-
-
-
-
-
-
-
 // stores the username and password of the user
 app.post('/login', (req, res) => {
   message = loginStatement(req.body.username, req.body.password)
@@ -93,3 +85,4 @@ const port = 4000;
 app.listen(port, function () {
   console.log(`Listening on port ${port}`);
 });
+
