@@ -8,17 +8,22 @@ async function whatThe () {
 }
 
 async function someF () {
-  var response = await fetch(`/history/${localStorage.getItem("user")}`)
+  console.log(localStorage.getItem('username'))
+  var response = await fetch(`/history/${localStorage.getItem('username')}`)
   var date = await response.json()
   console.log(date)
   return date;
 }
 
 var date = await someF()
-// mock data to be replaced by database
-const session = new Session(date[0].time)
+console.log(date)
+let sessions = [];
 
-let sessions = [session];
+// mock data to be replaced by database
+for (var i = 0; i < date.length; i++) {
+  const session = new Session(date[i].time)
+  sessions.push(session)
+}
 
 function previousSessions() {
     const tableBodyEl = document.querySelector('#sessions');

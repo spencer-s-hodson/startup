@@ -1,5 +1,7 @@
 const express = require('express');
 const app = express();
+const DB = require('./database.js');
+
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
@@ -11,17 +13,23 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
+
+
+
+
+
+
+
+
 // stores the username and password of the user
 app.post('/login', (req, res) => {
   message = loginStatement(req.body.username, req.body.password)
-  console.log("this is the body", req.body)
   res.status(message[0]).send({"message": message[1]})
 });
 
 // 501 server error 401 frontend error, know the difference
 users = {}
 function loginStatement(username, password) {
-    console.log(username, password)
   if ((username in users) && (users[username] != password)) { // username exists, wrong password
     return [501, "Incorrect Password"] 
   }
@@ -36,16 +44,17 @@ function loginStatement(username, password) {
 
 let array = []
 app.post('/joinSession', (req, res) => {
+    DB.addSession(req.body)
     array.push(req.body)
-    console.log("this is the body", req.body)
     res.status(201).send({"message": "User joined Zoom"})
   });
 
 // make sure that i populate the array before i get it
-app.get('/history/:username', (req, res) => {
+app.get('/history/:username', async (req, res) => {
+    console.log(req.params.username)
+    let array = await DB.getRecentSessions(req.params.username)
     res.send(array)
 })
-
 
 app.get('/cookie', (req, res, next) => {
   res.send({cookie: req.cookies});
@@ -80,7 +89,7 @@ app.use(function (err, req, res, next) {
 });
 
 // Listening to a network port
-const port = 8080;
+const port = 4000;
 app.listen(port, function () {
   console.log(`Listening on port ${port}`);
 });
