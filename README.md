@@ -64,3 +64,10 @@ For this deliverable, I created an HTTP service to host my frontend and provide 
 - **Calls to third party endpoints** - about.js
 - **Backend service endpoints** - Placeholders for login that stores the current user and password on the server. Endpoints for storing session information as well.
 - **Frontend calls service endpoints** - I did this use the fetch function.
+
+## DB Deliverable
+For this deliverable I stored and retrieved data from MongoDB.
+
+- **MongoDB Atlas database created** - check!
+- **Endpoints for data** - My stubbed out endpoints now process the data and send it to Mongo.
+- **Stores data in MongoDB** - check!
