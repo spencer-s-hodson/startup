@@ -1,3 +1,21 @@
+async function createUser() {
+  const userEl = document.getElementById("username");
+  const passEl = document.getElementById("password");
+
+  try {
+    const response = await fetch("/api/auth/create", {
+        method: "post",
+        headers: { 'Content-type': 'application/json' },
+        body: JSON.stringify({ username: userEl.value, password: passEl.value })
+      });
+      alert("New account created, please login")
+  }
+  catch(error) {
+    console.error(error);
+    alert("An error occurred while logging in. Please try again later.");
+  }
+}
+
 async function login() {
   const userEl = document.getElementById("username");
   const passEl = document.getElementById("password");
@@ -8,7 +26,7 @@ async function login() {
   } else {
     try {
       // Send the login request to the server
-      const response = await fetch("/login", {
+      const response = await fetch("/api/auth/login", {
         method: "post",
         headers: { 'Content-type': 'application/json' },
         body: JSON.stringify({ username: userEl.value, password: passEl.value })
@@ -41,7 +59,6 @@ async function startSession() {
   hour12: true
 });
 
-
   const response = await fetch("/joinSession", {
     method: "post",
     headers: { 'Content-type': 'application/json' },
@@ -51,15 +68,6 @@ async function startSession() {
     alert("Your session started at " + formattedTime + ", and will finish in an hour. You are now being redirected to Zoom.")
     window.location.href = "https://byu.zoom.us/my/spencerhodson";
 }
-
-
-
-
-
-
-
-
-
 
 document.addEventListener("DOMContentLoaded", function() {
   // On the home page, retrieve the stored username from local storage

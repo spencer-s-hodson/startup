@@ -1,10 +1,16 @@
+const cookieParser = require('cookie-parser');
+const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
 
+const authCookieName = 'token';
 
 // JSON body parsing using built-in middleware
 app.use(express.json());
+
+// Use the cookie parser middleware for tracking authentication tokens
+app.use(cookieParser());
 
 // Serve up the front-end static content hosting
 app.use(express.static('public'));
@@ -13,26 +19,81 @@ app.use(express.static('public'));
 var apiRouter = express.Router();
 app.use(`/api`, apiRouter);
 
-// stores the username and password of the user
-app.post('/login', (req, res) => {
-  message = loginStatement(req.body.username, req.body.password)
-  res.status(message[0]).send({"message": message[1]})
+// CreateAuth token for a new user
+apiRouter.post('/auth/create', async (req, res) => {
+  console.log("increate")
+  if (await DB.getUser(req.body.username)) {
+    console.log("error found")
+    res.status(409).send({ msg: 'Existing user' });
+  } else {
+    const user = await DB.createUser(req.body.username, req.body.password);
+    console.log(user)
+    // Set the cookie
+    setAuthCookie(res, user.token);
+
+    res.send({
+      id: user._id,
+    });
+  }
 });
 
-// 501 server error 401 frontend error, know the difference
-users = {}
-function loginStatement(username, password) {
-  if ((username in users) && (users[username] != password)) { // username exists, wrong password
-    return [501, "Incorrect Password"] 
+// GetAuth token for the provided credentials
+apiRouter.post('/auth/login', async (req, res) => {
+  const user = await DB.getUser(req.body.username);
+  if (user) {
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      setAuthCookie(res, user.token);
+      res.send({ id: user._id });
+      return;
+    }
   }
-  else if (!(username in users)) { // creates a new user, and assigns the password
-    users[username] = password
-    return [201, "User Created"]
-}
-  else if ((username in users) && (users[username] === password)) {
-    return [201, "Successful Login"]
+  res.status(401).send({ msg: 'Unauthorized' });
+});
+
+// DeleteAuth token if stored in cookie
+apiRouter.delete('/auth/logout', (_req, res) => {
+  res.clearCookie(authCookieName);
+  res.status(204).end();
+});
+
+// GetUser returns information about a user
+apiRouter.get('/user/:email', async (req, res) => {
+  const user = await DB.getUser(req.params.username);
+  if (user) {
+    const token = req?.cookies.token;
+    res.send({ email: user.username, authenticated: token === user.token });
+    return;
   }
-}
+  res.status(404).send({ msg: 'Unknown' });
+});
+
+// secureApiRouter verifies credentials for endpoints
+var secureApiRouter = express.Router();
+apiRouter.use(secureApiRouter);
+
+secureApiRouter.use(async (req, res, next) => {
+  authToken = req.cookies[authCookieName];
+  const user = await DB.getUserByToken(authToken);
+  if (user) {
+    next();
+  } else {
+    res.status(401).send({ msg: 'Unauthorized' });
+  }
+});
+
+// stores the username and password of the user
+apiRouter.post('/auth/login', async (req, res) => {
+  const user = await DB.getUser(req.body.email);
+  if (user) {
+    if (await bcrypt.compare(req.body.password, user.password)) {
+      setAuthCookie(res, user.token);
+      res.send({ id: user._id });
+      return;
+    }
+  }
+  res.status(401).send({ msg: 'Unauthorized' });
+});
+
 
 let array = []
 app.post('/joinSession', (req, res) => {
@@ -74,6 +135,15 @@ app.delete(/\/store\/(.+)/, (req, res) => res.send({delete: req.params[0]}));
 app.get('/error', (req, res, next) => {
   throw new Error('Trouble in river city');
 });
+
+// setAuthCookie in the HTTP response
+function setAuthCookie(res, authToken) {
+  res.cookie(authCookieName, authToken, {
+    secure: true,
+    httpOnly: true,
+    sameSite: 'strict',
+  });
+}
 
 // THIS IS GOOD
 app.use(function (err, req, res, next) {
