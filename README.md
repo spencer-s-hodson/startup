@@ -71,3 +71,11 @@ For this deliverable I stored and retrieved data from MongoDB.
 - **MongoDB Atlas database created** - check!
 - **Endpoints for data** - My stubbed out endpoints now process the data and send it to Mongo.
 - **Stores data in MongoDB** - check!
+
+## Login Deliverable
+For this deliverable I associate the votes with the logged in user.
+
+- **User registration** - Creates a new account in the database.
+- **Existing user** - Stores the all session history for that specific user when logged in.
+- **Use MongoDB to store credentials** - Stores both user and their session history.
+- **Restricts functionality** - You cannot view session history, leave a review, or join the session until you have logged in.
