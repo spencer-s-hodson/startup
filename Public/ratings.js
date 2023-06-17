@@ -17,3 +17,10 @@
       chatText.innerHTML = `<div class="event"><span class="player-event">Paul</span>${"⭐".repeat(randomRating)} Thanks for the help!</div>` + chatText.innerHTML;
     }, 2000);
   }
+
+
+
+
+
+
+  

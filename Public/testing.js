@@ -9,7 +9,6 @@ function arrays() {
     
 }
 
-
 // this if for the JS objects and classes assignment
 class Phone {
     constructor(regEx) {

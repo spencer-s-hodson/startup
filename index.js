@@ -3,6 +3,8 @@ const bcrypt = require('bcrypt');
 const express = require('express');
 const app = express();
 const DB = require('./database.js');
+const { WebSocketServer } = require('ws');
+
 
 const authCookieName = 'token';
 
@@ -14,6 +16,11 @@ app.use(cookieParser());
 
 // Serve up the front-end static content hosting
 app.use(express.static('public'));
+
+const port = process.argv.length > 2 ? process.argv[2] : 4000;
+server = app.listen(port, () => {
+  console.log(`Listening on ${port}`);
+});
 
 // Router for service endpoints
 var apiRouter = express.Router();
@@ -145,14 +152,75 @@ function setAuthCookie(res, authToken) {
   });
 }
 
+
+
+
+
+
+
+
+// Create a websocket object
+const wss = new WebSocketServer({ noServer: true });
+
+// Handle the protocol upgrade from HTTP to WebSocket
+server.on('upgrade', (request, socket, head) => {
+  wss.handleUpgrade(request, socket, head, function done(ws) {
+    wss.emit('connection', ws, request);
+  });
+});
+
+// Keep track of all the connections so we can forward messages
+let connections = [];
+
+wss.on('connection', (ws) => {
+  const connection = { id: connections.length + 1, alive: true, ws: ws };
+  connections.push(connection);
+
+  // Forward messages to everyone except the sender
+  ws.on('message', function message(data) {
+    connections.forEach((c) => {
+      if (c.id !== connection.id) {
+        c.ws.send(data);
+      }
+    });
+  });
+
+  // Remove the closed connection so we don't try to forward anymore
+  ws.on('close', () => {
+    connections.findIndex((o, i) => {
+      if (o.id === connection.id) {
+        connections.splice(i, 1);
+        return true;
+      }
+    });
+  });
+
+  // Respond to pong messages by marking the connection alive
+  ws.on('pong', () => {
+    connection.alive = true;
+  });
+});
+
+// Keep active connections alive
+setInterval(() => {
+  connections.forEach((c) => {
+    // Kill any connection that didn't respond to the ping last time
+    if (!c.alive) {
+      c.ws.terminate();
+    } else {
+      c.alive = false;
+      c.ws.ping();
+    }
+  });
+}, 10000);
+
+
+
+
+
+
+
 // THIS IS GOOD
 app.use(function (err, req, res, next) {
   res.status(500).send({type: err.name, message: err.message});
 });
-
-// Listening to a network port
-const port = 4000;
-app.listen(port, function () {
-  console.log(`Listening on port ${port}`);
-});
-
