@@ -79,3 +79,12 @@ For this deliverable I associate the votes with the logged in user.
 - **Existing user** - Stores the all session history for that specific user when logged in.
 - **Use MongoDB to store credentials** - Stores both user and their session history.
 - **Restricts functionality** - You cannot view session history, leave a review, or join the session until you have logged in.
+
+## WebSocket Deliverable
+For this deliverable I used webSocket to update the votes on the frontend in realtime.
+
+- **Backend listens for WebSocket connection** - working!
+- **Frontend makes WebSocket connection** - working!
+- **Data sent over WebSocket connection** - working!
+- **WebSocket data displayed** - all users on the server can view chat sent between each other in real time
+

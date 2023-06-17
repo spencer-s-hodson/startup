@@ -101,7 +101,6 @@ apiRouter.post('/auth/login', async (req, res) => {
   res.status(401).send({ msg: 'Unauthorized' });
 });
 
-
 let array = []
 app.post('/joinSession', (req, res) => {
     DB.addSession(req.body)
