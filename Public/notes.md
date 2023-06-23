@@ -91,4 +91,27 @@ Answer: A D B
 - what does <div> stand for?
 - understand Promises
 - the following script makes a script executable: chmod +x deploy.sh
+
 - 
+
+
+
+
+
+
+# Final Review
+**Question 1 Port 80 is reserved for?**
+Answer: HTTP
+
+**Question 2: HTTP status codes in the 300 range are for?**
+Answer: content redirects or caching
+
+**Question 3: Which is not a standard HTTP header?**
+Answer: Langauge
+
+**Question 4: Cookies allow:**
+Answer: A server to store data on the client
+
+**Question 5: For the request GET/fav/george, what is logged?**\
+<img src="[https://github.com/spencer-s-hodson/startup/assets/125321450/a6dc96a2-e7db-4cc0-aea5-12d21eaa3ed6](https://images-cdn.kahoot.it/907074b0-266a-4d57-82c3-9dcf71190893?auto=webp&width=1000)https://images-cdn.kahoot.it/907074b0-266a-4d57-82c3-9dcf71190893?auto=webp&width=1000" width="500">\
+Answer: paul george john
