@@ -100,16 +100,16 @@ Answer: A D B
 
 
 # Final Review
-**Question 1 Port 80 is reserved for?**
+**Question 1 Port 80 is reserved for?**\
 Answer: HTTP
 
-**Question 2: HTTP status codes in the 300 range are for?**
+**Question 2: HTTP status codes in the 300 range are for?**\
 Answer: content redirects or caching
 
-**Question 3: Which is not a standard HTTP header?**
+**Question 3: Which is not a standard HTTP header?**\
 Answer: Langauge
 
-**Question 4: Cookies allow:**
+**Question 4: Cookies allow:**\
 Answer: A server to store data on the client
 
 **Question 5: For the request GET/fav/george, what is logged?**\
