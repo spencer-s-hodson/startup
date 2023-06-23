@@ -117,3 +117,15 @@ Answer: app.delete(/fav\/(.*)/, () => {})
 **Question 7: Which document matches this MongoDB query?**\
 <img src="https://images-cdn.kahoot.it/d0a8c0d5-2488-448f-9a92-ae103c7161d9?auto=webp&width=1000" width="500">\
 Answer: { name: "Walke", score: -55 }
+
+**Question 8: Why is hashing stored passwords important?**\
+Answer: It improves security by making the password unreadable
+
+**Question 9: Given the following code, what will console.log print?**\
+<img src="https://images-cdn.kahoot.it/f696d33d-3ee4-4937-be45-50513792defc?auto=webp&width=1000" width="500">\
+Answer: Client:Server:Hello
+
+**Question 10: What value does WebSocket add to HTTP?**\
+Answer: It is peer to peer instead of client to server
+
+
