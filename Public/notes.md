@@ -92,12 +92,6 @@ Answer: A D B
 - understand Promises
 - the following script makes a script executable: chmod +x deploy.sh
 
-- 
-
-
-
-
-
 
 # Final Review
 **Question 1 Port 80 is reserved for?**\
@@ -115,3 +109,11 @@ Answer: A server to store data on the client
 **Question 5: For the request GET/fav/george, what is logged?**\
 <img src="https://github.com/spencer-s-hodson/startup/assets/125321450/a6dc96a2-e7db-4cc0-aea5-12d21eaa3ed6](https://images-cdn.kahoot.it/907074b0-266a-4d57-82c3-9dcf71190893?auto=webp&width=1000)https://images-cdn.kahoot.it/907074b0-266a-4d57-82c3-9dcf71190893?auto=webp&width=1000" width="500">\
 Answer: paul george john
+
+**Question 6: Which Express middleware will match this fetch request?**\
+<img src="https://images-cdn.kahoot.it/a5a33ddc-5363-46c0-84a8-b1957cb376ff?auto=webp&width=1000" width="500">\
+Answer: app.delete(/fav\/(.*)/, () => {})
+
+**Question 7: Which document matches this MongoDB query?**\
+<img src="https://images-cdn.kahoot.it/d0a8c0d5-2488-448f-9a92-ae103c7161d9?auto=webp&width=1000" width="500">\
+Answer: { name: "Walke", score: -55 }
