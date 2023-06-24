@@ -128,4 +128,22 @@ Answer: Client:Server:Hello
 **Question 10: What value does WebSocket add to HTTP?**\
 Answer: It is peer to peer instead of client to server
 
+**Question 11: What is NOT the purpose of JSX?**\
+Answer: To combine CSS, HTML, and JavaScript
 
+**Question 12: What will component A initially display?**\
+<img src="https://images-cdn.kahoot.it/eb05f83b-27b1-42ed-9c43-27e5705fe3fc?auto=webp&width=1000" width="500">\
+Answer: tacofish
+
+**Question 13: What will the URL '/burger' render?**\
+<img src="https://images-cdn.kahoot.it/7e2b94e0-40d7-4a94-bc2b-d8bcdd40b6aa?auto=webp&width=1000" width="500">\
+Answer: B
+
+**Question 14: What does the command "NPM isntall ws" NOT do?**\
+Answer: Adds template code for websockets to your JavaScript
+
+**Question 15: T o F, you can use fetch in front=end and back-end code**\
+Answer: True
+
+**Question 16: Which of the following is NOT true about a Linux daemon?**
+Answer: Cannot fork other processes
